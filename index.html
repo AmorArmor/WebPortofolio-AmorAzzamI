@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Retro Game Edition</title>
+    <meta name="description"
+        content="Portfolio pribadi dengan tema retro game. Menampilkan profil diri, skill, penugasan, portofolio organisasi, dan kontak." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- SCANLINES OVERLAY -->
+    <div class="scanlines"></div>
+
+    <!-- FLOATING PIXELS -->
+    <div class="pixel-bg" id="pixelBg"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="pixel-cursor">▶</span>
+            <span class="logo-text">PORTO.EXE</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#beranda" class="nav-link" id="nav-beranda">[ BERANDA ]</a></li>
+            <li><a href="#profil" class="nav-link" id="nav-profil">[ PROFIL ]</a></li>
+            <li><a href="#skill" class="nav-link" id="nav-skill">[ SKILL ]</a></li>
+            <li><a href="#penugasan" class="nav-link" id="nav-penugasan">[ PENUGASAN ]</a></li>
+            <li><a href="#portofolio" class="nav-link" id="nav-portofolio">[ PORTOFOLIO ]</a></li>
+            <li><a href="#kontak" class="nav-link" id="nav-kontak">[ KONTAK ]</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECTION: BERANDA -->
+    <section class="section hero" id="beranda">
+        <div class="crt-frame">
+            <div class="hero-content">
+                <div class="hero-tagline">PLAYER 1 READY</div>
+                <h1 class="hero-title glitch" data-text="SELAMAT DATANG!">SELAMAT DATANG!</h1>
+                <p class="hero-subtitle typewriter" id="typewriterText"></p>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">LVL</div>
+                        <div class="stat-value">01</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">EXP</div>
+                        <div class="stat-value">9999</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">CLASS</div>
+                        <div class="stat-value">DEV</div>
+                    </div>
+                </div>
+                <a href="#profil" class="btn-retro btn-primary" id="btn-start-game">
+                    <span class="btn-icon">▶</span> START GAME
+                </a>
+            </div>
+            <div class="hero-art">
+                <div class="pixel-character">
+                    <div class="char-icon">👾</div>
+                    <div class="char-shadow"></div>
+                </div>
+                <div class="floating-coins">
+                    <span class="coin">★</span>
+                    <span class="coin">★</span>
+                    <span class="coin">★</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>▼ SCROLL ▼</span>
+        </div>
+    </section>
+
+    <!-- SECTION: PROFIL -->
+    <section class="section" id="profil">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STAGE 01</span>
+                <h2 class="section-title">CHARACTER SELECT</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="profil-card">
+                <div class="profil-left">
+                    <div class="avatar-frame">
+                        <div class="avatar-border-anim"></div>
+                        <img src="assets/fotocf21(1)png.jpg" alt="Foto Profil" class="avatar-img" id="profile-avatar" />
+                        <div class="avatar-badge">P1</div>
+                    </div>
+                    <div class="profil-tags">
+                        <span class="tag tag-green">● ONLINE</span>
+                        <span class="tag tag-blue">MAHASISWA</span>
+                    </div>
+                </div>
+                <div class="profil-right">
+                    <div class="profil-info-box">
+                        <div class="info-header">── PLAYER INFO ──</div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="info-key">NAMA</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-nama">Amor Azzam Imani</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">NIM</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-nim">251524038</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">JURUSAN</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-jurusan">Teknik Informatika</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">KELAS</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-fakultas">1B - D4</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">ANGKATAN</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-angkatan">2025</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">ASAL</td>
+                                <td class="info-sep">:</td>
+                                <td class="info-val" id="profil-asal">Kota Bogor</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="profil-bio-box">
+                        <div class="info-header">── BIO ──</div>
+                        <p class="profil-bio" id="profil-bio">
+                            Halo! Aku adalah seorang mahasiswa yang bersemangat dalam dunia teknologi dan game
+                            development.
+                            Aku suka mengeksplorasi hal-hal baru, belajar berbagai bahasa pemrograman, dan berkolaborasi
+                            dalam tim yang kreatif. Mari kita capai HIGH SCORE bersama! 🚀
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: SKILL & MINAT -->
+    <section class="section section-dark" id="skill">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STAGE 02</span>
+                <h2 class="section-title">SKILL TREE</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skill-grid">
+
+                <!-- TECH SKILLS -->
+                <div class="skill-category">
+                    <div class="skill-cat-header">⚔️ TECH SKILLS</div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML / CSS</div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-bar" data-level="70">
+                                    <div class="skill-fill" style="--target: 70%"></div>
+                                </div>
+                                <span class="skill-pct">70</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-bar" data-level="70">
+                                    <div class="skill-fill" style="--target: 70%"></div>
+                                </div>
+                                <span class="skill-pct">70</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-bar" data-level="75">
+                                    <div class="skill-fill" style="--target: 75%"></div>
+                                </div>
+                                <span class="skill-pct">75</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C / C++</div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-bar" data-level="80">
+                                    <div class="skill-fill" style="--target: 80%"></div>
+                                </div>
+                                <span class="skill-pct">80</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Git / GitHub</div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-bar" data-level="85">
+                                    <div class="skill-fill" style="--target: 85%"></div>
+                                </div>
+                                <span class="skill-pct">85</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOFT SKILLS -->
+                <div class="skill-category">
+                    <div class="skill-cat-header">🛡️ SOFT SKILLS</div>
+                    <div class="skill-badges">
+                        <div class="badge-card" id="badge-teamwork">
+                            <div class="badge-icon">🤝</div>
+                            <div class="badge-label">TEAMWORK</div>
+                            <div class="badge-stars">★★★★★</div>
+                        </div>
+                        <div class="badge-card" id="badge-creative">
+                            <div class="badge-icon">💡</div>
+                            <div class="badge-label">CREATIVE</div>
+                            <div class="badge-stars">★★★★★</div>
+                        </div>
+                        <div class="badge-card" id="badge-problem">
+                            <div class="badge-icon">🔍</div>
+                            <div class="badge-label">PROBLEM SOLVING</div>
+                            <div class="badge-stars">★★★★☆</div>
+                        </div>
+                        <div class="badge-card" id="badge-communication">
+                            <div class="badge-icon">💬</div>
+                            <div class="badge-label">COMMUNICATION</div>
+                            <div class="badge-stars">★★★★☆</div>
+                        </div>
+                        <div class="badge-card" id="badge-adaptable">
+                            <div class="badge-icon">⚡</div>
+                            <div class="badge-label">ADAPTABLE</div>
+                            <div class="badge-stars">★★★★★</div>
+                        </div>
+                        <div class="badge-card" id="badge-leadership">
+                            <div class="badge-icon">👑</div>
+                            <div class="badge-label">LEADERSHIP</div>
+                            <div class="badge-stars">★★★☆☆</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MINAT -->
+                <div class="skill-category full-width">
+                    <div class="skill-cat-header">❤️ MINAT & HOBI</div>
+                    <div class="minat-list">
+                        <div class="minat-item" id="minat-webdev">
+                            <span class="minat-icon">🌐</span>
+                            <span class="minat-text">Web Development</span>
+                        </div>
+                        <div class="minat-item" id="minat-uiux">
+                            <span class="minat-icon">🎨</span>
+                            <span class="minat-text">UI/UX Design</span>
+                        </div>
+                        <div class="minat-item" id="minat-game">
+                            <span class="minat-icon">🎮</span>
+                            <span class="minat-text">Game Development</span>
+                        </div>
+                        <div class="minat-item" id="minat-ai">
+                            <span class="minat-icon">🤖</span>
+                            <span class="minat-text">Artificial Intelligence</span>
+                        </div>
+                        <div class="minat-item" id="minat-music">
+                            <span class="minat-icon">🎵</span>
+                            <span class="minat-text">Music & Content</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PENUGASAN -->
+    <section class="section" id="penugasan">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STAGE 03</span>
+                <h2 class="section-title">QUEST LOG</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">Selesaikan semua quest untuk mendapatkan EXP maksimal!</p>
+            </div>
+
+            <div class="quest-list">
+
+                <!-- TUGAS 2 -->
+                <div class="quest-card" id="quest-tugas2">
+                    <div class="quest-number">QUEST 02</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <div class="quest-icon">📄</div>
+                            <div class="quest-meta">
+                                <h3 class="quest-title">Penugasan 2 — Dokumen TOR</h3>
+                                <div class="quest-status status-complete">✔ COMPLETED</div>
+                            </div>
+                        </div>
+                        <p class="quest-desc">
+                            Player ditugaskan untuk membuat sebuah TOR kegiatan
+                            yang bertujuan merancang kegiatan berdasarkan studi kasus yang terlampir.
+                        </p>
+                        <div class="quest-actions">
+                            <a href="assets/tugas2ini.pdf" download class="btn-retro btn-download"
+                                id="btn-download-tugas2">
+                                <span>⬇</span> DOWNLOAD FILE
+                            </a>
+                            <a href="https://drive.google.com/file/d/13HWgz0La2vj4jzf_srq1PLt2SiDymdKh/view?usp=sharing"
+                                target="_blank" class="btn-retro btn-view" id="btn-view-contoh">
+                                <span>📋</span> CONTOH DOKUMEN
+                            </a>
+                        </div>
+                    </div>
+                    <div class="quest-reward">
+                        <div class="reward-label">REWARD</div>
+                        <div class="reward-exp">+250 EXP</div>
+                    </div>
+                </div>
+
+                <!-- TUGAS 3 -->
+                <div class="quest-card" id="quest-tugas3">
+                    <div class="quest-number">QUEST 03</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <div class="quest-icon">🖼️</div>
+                            <div class="quest-meta">
+                                <h3 class="quest-title">Penugasan 3 — Infografis</h3>
+                                <div class="quest-status status-complete">✔ COMPLETED</div>
+                            </div>
+                        </div>
+                        <p class="quest-desc">
+                            Player ditugaskan untuk membuat sebuah infografis
+                            yang bertujuan menyampaikan informasi secara ringkas, visual, dan mudah dipahami.
+                        </p>
+                        <div class="infografis-container">
+                            <img src="assets/infografistugas3.jpg" alt="Infografis Penugasan 3" class="infografis-img"
+                                id="infografis-img" />
+                            <div class="infografis-overlay">
+                                <button class="btn-retro btn-zoom" id="btn-zoom-infografis" onclick="openModal()">🔍
+                                    ZOOM IN</button>
+                            </div>
+                        </div>
+                        <div class="quest-actions">
+                            <a href="assets/infografistugas3.jpg" download class="btn-retro btn-download"
+                                id="btn-download-infografis">
+                                <span>⬇</span> DOWNLOAD INFOGRAFIS
+                            </a>
+                        </div>
+                    </div>
+                    <div class="quest-reward">
+                        <div class="reward-label">REWARD</div>
+                        <div class="reward-exp">+300 EXP</div>
+                    </div>
+                </div>
+
+                <!-- TUGAS 4 -->
+                <div class="quest-card" id="quest-tugas4">
+                    <div class="quest-number">QUEST 04</div>
+                    <div class="quest-content">
+                        <div class="quest-header">
+                            <div class="quest-icon">🎬</div>
+                            <div class="quest-meta">
+                                <h3 class="quest-title">Penugasan 4 — Video</h3>
+                                <div class="quest-status status-complete">✔ COMPLETED</div>
+                            </div>
+                        </div>
+                        <p class="quest-desc">
+                            Player ditugaskan untuk membuat sebuah video yang bertujuan
+                            menyampaikan informasi personal serta memberikan solusi atas permasalahan yang tercantum.
+                        </p>
+                        <div class="video-container" id="video-container">
+                            <video controls class="quest-video" id="tugas4-video" poster="assets/avatar.png">
+                                <source src="assets/tugas4.mp4" type="video/mp4" />
+                                <p class="video-fallback">Browser kamu tidak mendukung video.
+                                    <a href="assets/tugas4.mp4" id="link-download-video">Klik di sini untuk
+                                        mengunduh.</a>
+                                </p>
+                            </video>
+                            <div class="video-retro-frame"></div>
+                        </div>
+                    </div>
+                    <div class="quest-reward">
+                        <div class="reward-label">REWARD</div>
+                        <div class="reward-exp">+400 EXP</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PORTOFOLIO / RIWAYAT ORGANISASI -->
+    <section class="section section-dark" id="portofolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STAGE 04</span>
+                <h2 class="section-title">ACHIEVEMENT BOARD</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">Riwayat portofolio dan organisasi yang telah dicapai.</p>
+            </div>
+
+            <div class="porto-grid" id="porto-grid">
+
+                <div class="porto-card" data-category="organisasi" id="porto-2">
+                    <div class="porto-card-inner">
+                        <div class="porto-icon">🌎</div>
+                        <div class="porto-category-tag">ORGANISASI</div>
+                        <h3 class="porto-title">ENGLISH CLUB SMA</h3>
+                        <p class="porto-year">2023 – 2024</p>
+                        <p class="porto-desc">Menjabat sebagai Hubungan Masyarakat di English Club dan Event English
+                            Fest, menjadi jembatan
+                            komunikasi antar pihak internal dan eksternal sekolah. </p>
+                        <div class="porto-tech">
+                            <span class="tech-tag">HUMAS</span>
+                            <span class="tech-tag">EVENT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="porto-card" data-category="prestasi" id="porto-3">
+                    <div class="porto-card-inner">
+                        <div class="porto-icon">🏆</div>
+                        <div class="porto-category-tag">PRESTASI</div>
+                        <h3 class="porto-title">Semi Final ILPC 2025</h3>
+                        <p class="porto-year">2025</p>
+                        <p class="porto-desc">Semi Finalis dalam Informatics Logical and Programming Competition tingkat
+                            nasional
+                            yang diselenggarakan oleh Universitas Surabaya
+                        </p>
+                        <div class="porto-tech">
+                            <span class="tech-tag">KOMPETISI</span>
+                            <span class="tech-tag">PROGRAMMING</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="porto-card" data-category="proyek" id="porto-5">
+                    <div class="porto-card-inner">
+                        <div class="porto-icon">📱</div>
+                        <div class="porto-category-tag">PROYEK</div>
+                        <h3 class="porto-title">App Point of Sales</h3>
+                        <p class="porto-year">2025</p>
+                        <p class="porto-desc">Aplikasi sederhana untuk manajemen keuangan dengan fitur input data
+                            penjualan dan penyimpanan lokal.</p>
+                        <div class="porto-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">PROGRAMMING</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: KONTAK -->
+    <section class="section" id="kontak">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// STAGE 05</span>
+                <h2 class="section-title">CONTACT PLAYER</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">Hubungi aku untuk kolaborasi atau sekedar say hello!</p>
+            </div>
+
+            <div class="kontak-wrapper kontak-full">
+                <div class="kontak-right kontak-full">
+                    <div class="social-box">
+                        <div class="kontak-header">── SOCIAL LINKS ──</div>
+                        <div class="social-links">
+                            <a href="https://github.com/AmorArmor" target="_blank" class="social-card"
+                                id="social-github">
+                                <div class="social-icon github-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">GitHub</div>
+                                    <div class="social-handle">@AmorArmor</div>
+                                </div>
+                                <div class="social-arrow">→</div>
+                            </a>
+                            <a href="https://www.instagram.com/armoroflove3/" target="_blank" class="social-card"
+                                id="social-instagram">
+                                <div class="social-icon instagram-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                    </svg>
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Instagram</div>
+                                    <div class="social-handle">@armoroflove3</div>
+                                </div>
+                                <div class="social-arrow">→</div>
+                            </a>
+                            <a href="https://wa.me/6287780148671" target="_blank" class="social-card"
+                                id="social-whatsapp">
+                                <div class="social-icon whatsapp-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    </svg>
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">WhatsApp</div>
+                                    <div class="social-handle">+62 877 8014 8671</div>
+                                </div>
+                                <div class="social-arrow">→</div>
+                            </a>
+                            <a href="https://linkedin.com/in/AmorAzzamI" target="_blank" class="social-card"
+                                id="social-linkedin">
+                                <div class="social-icon linkedin-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">LinkedIn</div>
+                                    <div class="social-handle">Amor Azzam Imani</div>
+                                </div>
+                                <div class="social-arrow">→</div>
+                            </a>
+                            <a href="mailto:4mor4zzam1mani@gmail.com" class="social-card" id="social-email">
+                                <div class="social-icon email-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                        <path
+                                            d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                                    </svg>
+                                </div>
+                                <div class="social-info">
+                                    <div class="social-name">Email</div>
+                                    <div class="social-handle">4mor4zzam1mani@gmail.com</div>
+                                </div>
+                                <div class="social-arrow">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">PORTO.EXE</div>
+            <div class="footer-text">© 2026 Amor Azzam Imani · Made with ❤️ &amp; ☕</div>
+            <div class="footer-text">INSERT COIN TO CONTINUE</div>
+            <div class="lives">♥ ♥ ♥</div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">▲</button>
+
+    <!-- MODAL: INFOGRAFIS -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()" id="btn-close-modal">✕</button>
+            <img src="assets/infografistugas3.jpg" alt="Infografis Full" class="modal-img" id="modal-infografis-img" />
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
